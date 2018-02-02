@@ -1,0 +1,46 @@
+<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:SOAPQueryServer">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:submitQuery soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <query xsi:type="urn:SOAPQuery">
+            <userId xsi:type="xsd:string">admin.testdomain1.digitalsafe.net</userId>
+            <domainId xsi:type="xsd:string">testdomain1</domainId>
+            <docClassName xsi:type="xsd:string">=EMAIL=</docClassName>
+            <!--filter xsi:type="xsd:string">null</filter-->
+            <!--Zero or more repetitions:-->
+            <messageTypes xsi:type="xsd:string">EMAIL</messageTypes>
+            <!--Zero or more repetitions:-->
+            <!--<messageDirections xsi:type="xsd:string">?</messageDirections>-->
+            <!--Zero or more repetitions:-->
+            <internalDomains xsi:type="xsd:string">digitalsafe.net</internalDomains>
+            <sentDateFrom xsi:type="xsd:long">1456790400000</sentDateFrom>
+            <sentDateTo xsi:type="xsd:long">1463270400000</sentDateTo>
+            <archDateFrom xsi:type="xsd:long">1461910424570</archDateFrom>
+            <archDateTo xsi:type="xsd:long">1467094424570</archDateTo>
+            <includeStoredFields xsi:type="xsd:boolean">true</includeStoredFields>
+            <queryTimeout xsi:type="xsd:long">300000</queryTimeout>
+            <resultsSizeLimit xsi:type="xsd:int">10</resultsSizeLimit>
+            <!--1 or more repetitions:-->
+            <subQueries xsi:type="urn:SOAPMailboxQuery">
+               <mailboxId xsi:type="xsd:string">sally.beck@enron.com</mailboxId>
+               <matchAll xsi:type="xsd:boolean">true</matchAll>
+               <!--Zero or more repetitions:-->
+               <criteria xsi:type="urn:NVPair">
+                  <name xsi:type="xsd:string">Subject</name>
+                  <!--1 or more repetitions:-->
+                  <value xsi:type="xsd:string">test</value>
+                  <!--Optional:-->
+                  <doesNotContain xsi:type="xsd:boolean">true</doesNotContain>
+               </criteria>
+            </subQueries>
+            <!--Zero or more repetitions:--> -->
+          <!--  <scprops xsi:type="urn:SCProp"> -->
+          <!--     <name xsi:type="xsd:string">?</name> -->
+           <!--    <value xsi:type="xsd:string">?</value> -->
+          <!--  </scprops> -->
+            <!--Optional:--> 
+          <!--  <length xsi:type="xsd:int">?</length> -->
+         </query>
+      </urn:submitQuery>
+   </soapenv:Body>
+</soapenv:Envelope>

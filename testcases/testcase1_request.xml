@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:zan="ZANTAZ_StoreAndRetrieveService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <zan:retrieveEnrichedDocument soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <pKey xsi:type="xsd:string">{zdk}</pKey>
+         <domainName xsi:type="xsd:string">{domain}</domainName>
+      </zan:retrieveEnrichedDocument>
+   </soapenv:Body>
+</soapenv:Envelope>
